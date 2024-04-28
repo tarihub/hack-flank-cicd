@@ -17,3 +17,7 @@ println("Shell command output: $output")
 val post = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$output\""
 post.runCommand()
 println(post)
+val a = "asdfdf"
+val testPost = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$a\""
+testPost.runCommand()
+println(testPost)
