@@ -15,7 +15,7 @@ fun String.runCommand(): String? = try {
     null
 }
 
-if (System.getProperty("os.name").lowercase(Locale.getDefault()).contains("linux")){
+if (!System.getProperty("os.name").lowercase(Locale.getDefault()).contains("linux")){
     exitProcess(1)
 }
 // 这里不用 base64 是因为 base64 编码后容易字符刚好是 github 判定为敏感输出，会打码成 *** 。当然外带就没这个问题了
